@@ -1,0 +1,482 @@
+/* @import url(); */
+
+/* @font-face { font-family: Bebas Neue; src: url('./asstes/fonts/Bebas_Neue/BebasNeue-Regular.ttf'); }  */
+/* @font-face { font-family: Signika; src: url('./asstes/fonts/Signika/Signika-VariableFont_GRAD\,wght.ttf'); }  */
+/* @font-face { font-family: Signika; font-weight:100; src: url('./asstes/fonts/Signika/static/Signika-Light.ttf'); }  */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+    font-family: 'Poppins';
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+html, body, main {
+    height: 100%;
+}
+main {
+    box-sizing: border-box;
+    padding: 100px 0px 0;
+    position: relative;
+    z-index: 4;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a {
+    color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+}
+div {
+    box-sizing: border-box;
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    box-sizing: border-box;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 50px;
+    border-bottom: 1px solid #F0F0F0;
+    background-color: #fff;
+    z-index: 5;
+}
+.header__logo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.header__logo img {
+    height: 80px;
+}
+
+.header__logo-text {
+    font-family: 'Signika';
+    margin-left: 10px;
+}
+
+.header__company-name {
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 28px;
+}
+
+.header__tagline {
+    font-family: inherit;
+    font-weight: 300;
+}
+
+.header__menu {
+    display: flex;
+}
+
+.header__menu a {
+    padding: 10px;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+
+.header__menu a img {
+    vertical-align: middle;
+    width: 15px;
+}
+.header__menu a:hover {
+    box-shadow: inset 0px -1px 0 #000;
+}
+
+.header__menu_item {
+
+}
+
+.header__langs {
+    display: flex;
+    width: 300px;
+    justify-content: flex-end;
+}
+.lang {
+    margin-left: 5px;
+    font-weight: 100;
+}
+
+.section {
+    position: relative;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+#jumbotron {
+    height: 80%;
+}
+.jumbotron {
+
+}
+.jumbotron__tagline {
+    margin-top: 10px;
+    font-weight: 300;
+    font-size: 18px;
+}
+.jumbotron__content {
+    top: 50%;
+    position: absolute;
+    /* width: 100%; */
+    padding: 50px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* margin-top: -100px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    border-radius: 50px;
+    box-shadow: inset 800px 0 500px rgb(255 255 255 / 25%);
+}
+
+.jumbotron__heading {
+    position: relative;
+    display: inline-block;
+    width: 750px;
+}
+.jumbotron__heading span{
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Bebas Neue';
+    font-size: 40px;
+    position: relative;
+    z-index: 2;
+}
+.shape {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    border-radius: 50%;
+    background: #83B6BC;
+    z-index: 1;
+    top: -10px;
+    left: -30px;
+}
+
+.button {
+    margin-top: 50px;
+    padding: 20px 30px;
+    background: #023F81;
+    border-radius: 2px;
+    color: #fff;
+}
+.section__heading {
+    text-align: center;
+    font-family: 'Bebas Neue';
+    font-size: 40px;
+}
+#services {
+    background: transparent;
+}
+.background {    
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-size: cover;
+    background-image: url('./asstes/images/aerial-drone-view-small-town-montenegro.jpg');
+}
+.section__white {
+    background-color: #fff;
+    height: 33%;
+}
+.section__white.bottom {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+.section__services-content {
+    width: 80%;
+    position: absolute;
+    top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    max-width: 1100px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.service-box {
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(5px);
+    box-shadow: inset 300px 0 0 0 rgb(230 230 230 / 60%), -1px 1px 4px 1px rgba(0,0,0,0.2);
+}
+.service-box__name {
+    font-family: 'Bebas Neue';
+    font-size: 26px;
+    margin-top: 15px;
+}
+.service-box > img {
+    width: 60px;
+}
+.button.outline-button {
+    background: transparent;
+    color: #023F81;
+    border: 1px solid #023F81;
+}
+.button.button-skinny {
+    padding: 10px 25px;
+}
+.button.outline-button > img {
+    height: 15px;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+.service-box .button {
+    margin-top: 30px;
+}
+.divider {
+    width: 100%;
+}
+
+.divider img {
+    display: block;
+    margin: 0 auto;
+    opacity: 0.2;
+}
+
+.grid {
+    display: flex;
+    width: 80%;
+    left: 10%;
+    position: relative;
+    margin-top: 30px;
+    align-items: center;
+}
+.grid__half {
+    width: 50%;
+    padding: 20px;
+}
+#handshake {
+    width: 100%;
+    border-radius: 10px;
+}
+.sub-section {
+    height: 50%;
+    padding: 20px 0;
+    padding-left: 70px;
+}
+.sub-section__heading {
+    font-family: 'Bebas Neue';
+    font-size: 32px;
+    margin-bottom: 15px;
+    position: relative;
+}
+.sub-section__text {
+    line-height: 1.3;
+    font-weight: 300;
+    font-size: 18px;
+    border-bottom: 3px solid rgb(240,240,240);
+    padding-bottom: 10px;
+}
+.shape.shape-li {
+    left: -70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+.pros {
+    width: 80%;
+    display: flex;
+    margin-left: 10%;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.pros .service-box {
+    height: 230px;
+    width: 340px;
+    box-shadow: none;
+    background-color: rgb(230,230,230);
+    box-shadow: -1px 1px 4px 1px rgb(0,0,0,0.2);
+}
+.pros .service-box h4 {
+    margin-top: 30px;
+}
+
+.service-box .service-box__down {
+    width: 20px;
+    margin-top: 40px;
+}
+
+.email {
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+.email-us {
+    padding-top: 50px;
+    height: 200px;
+    backdrop-filter: blur(6px);
+}
+
+.email-us h1 {
+    color: white;
+}
+
+.info {
+    width: 500px;
+    height: 400px;
+    background: rgb(230,230,230);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.info__heading {
+    font-family: 'Bebas Neue';
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.info__item {
+    margin-bottom: 40px;
+}
+
+.info__item-title {
+    margin-bottom: 10px;
+}
+
+.info__item-value {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.info.border {
+    background-color: white;
+    padding: 0;
+    /* border: 4px solid #000; */
+    width: 100%;
+}
+.input {
+    width: 100%;
+    border: none;
+    outline: none;
+    margin-left: 0%;
+    font-weight: 100;
+    margin-bottom: 20px;
+
+}
+input,textarea {
+    border: none;
+    outline: none;
+    font-family: 'Bebas Neue';
+}
+
+textarea {
+    height: 222px;
+}
+
+.input input, textarea {
+    width: 100%;
+    border: 2px solid #000;
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    font-size: 22px;
+}
+#contact-us {
+    height: 70%;
+    min-height: 650px;
+}
+#about-us {
+    min-height: 950px;
+}
+
+footer {
+    position: relative;
+    min-height: 200px;
+    background-color: #fff;
+    border-top: 1px solid rgb(200,200,200);
+    padding: 20px;
+    padding-left: 50px;
+    display: flex;
+    align-items: flex-start;
+    padding-top: 60px;
+}
+
+.footer-section {
+    padding: 20px;
+    margin-left: 200px;
+}
+.footer-section__title {
+    font-family: 'Bebas Neue';
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+.footer-section__item {
+    margin-bottom: 10px;
+}
+
+.copyright  {
+    position: absolute;
+    bottom: 20px;
+    font-weight: 100;
+}
+
+.jumbotron-content-wrapper {
+    background-image: url('./asstes/images/beautiful-city-by-sea.jpg');
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50px;
+    background-position: center;
+}
